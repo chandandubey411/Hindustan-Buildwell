@@ -13,8 +13,8 @@ const PageHero = ({ badge, title, titleHighlight, subtitle, image, breadcrumb, c
       />
 
       {/* Multi-layer overlay for premium dark feel */}
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/75 to-dark/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020B19]/95 via-[#020B19]/75 to-[#020B19]/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#020B19] via-[#020B19]/20 to-transparent" />
 
       {/* Animated grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -27,7 +27,7 @@ const PageHero = ({ badge, title, titleHighlight, subtitle, image, breadcrumb, c
 
         {/* Breadcrumb */}
         {breadcrumb && (
-          <div className="flex items-center gap-2 text-[11px] text-white/40 font-sans mb-5 uppercase tracking-widest">
+          <div className="flex items-center gap-2 text-[11px] text-[#FFFFFF]/50 font-sans mb-5 uppercase tracking-widest">
             <Link to="/" className="flex items-center gap-1.5 hover:text-primary transition-colors">
               <FaHome className="text-[10px]" /> Home
             </Link>
@@ -46,7 +46,7 @@ const PageHero = ({ badge, title, titleHighlight, subtitle, image, breadcrumb, c
 
         {/* Title */}
         <h1 className="font-heading font-extrabold uppercase tracking-tight leading-none mb-5">
-          <span className="block text-4xl md:text-6xl lg:text-7xl text-white">{title}</span>
+          <span className="block text-4xl md:text-6xl lg:text-7xl text-[#FFFFFF]">{title}</span>
           {titleHighlight && (
             <span className="block text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gold-gradient mt-1">
               {titleHighlight}
@@ -56,7 +56,7 @@ const PageHero = ({ badge, title, titleHighlight, subtitle, image, breadcrumb, c
 
         {/* Subtitle */}
         {subtitle && (
-          <p className="text-white/60 text-sm md:text-base font-sans font-light max-w-xl leading-relaxed">
+          <p className="text-[#FFFFFF]/75 text-sm md:text-base font-sans font-light max-w-xl leading-relaxed">
             {subtitle}
           </p>
         )}

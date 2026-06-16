@@ -65,7 +65,7 @@ const Hero = () => {
         </AnimatePresence>
         
         {/* Dark Premium Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/75 to-dark/40 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020B19] via-[#020B19]/75 to-transparent z-10" />
       </div>
 
       {/* Floating Graphic Blurs */}
@@ -92,7 +92,7 @@ const Hero = () => {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 max-w-5xl leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[#FFFFFF] mb-6 max-w-5xl leading-tight"
           >
             {heroSlides[currentSlide].title}
           </motion.h1>
@@ -103,7 +103,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-white/70 text-sm sm:text-base md:text-lg font-sans font-light max-w-2xl mb-12 leading-relaxed"
+          className="text-[#FFFFFF]/75 text-sm sm:text-base md:text-lg font-sans font-light max-w-2xl mb-12 leading-relaxed"
         >
           Hindustan Buildwell delivers premium residential, luxury commercial and core infrastructure projects with world-class quality and innovation.
         </motion.p>
@@ -174,11 +174,11 @@ const Hero = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="flex flex-wrap justify-center items-center gap-6 mt-2"
         >
-          <a href="/properties" className="text-white/60 text-xs font-semibold uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-2">
+          <a href="/properties" className="text-[#FFFFFF]/60 text-xs font-semibold uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-2">
             Explore Premium Catalog <FaArrowRight className="text-[9px]" />
           </a>
-          <span className="hidden sm:inline w-[1px] h-3 bg-white/15" />
-          <a href="/about" className="text-white/60 text-xs font-semibold uppercase tracking-wider hover:text-primary transition-colors">
+          <span className="hidden sm:inline w-[1px] h-3 bg-[#FFFFFF]/15" />
+          <a href="/about" className="text-[#FFFFFF]/60 text-xs font-semibold uppercase tracking-wider hover:text-primary transition-colors">
             Our Legacy
           </a>
         </motion.div>

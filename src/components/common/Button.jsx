@@ -11,10 +11,10 @@ const Button = ({
   const baseStyle = "relative overflow-hidden inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg font-heading text-sm font-semibold tracking-wider transition-all duration-300 transform uppercase active:scale-95";
   
   const variants = {
-    primary: "bg-gold-gradient text-white shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 border border-transparent",
-    outline: "bg-transparent text-primary hover:text-white border border-primary/60 hover:bg-gold-gradient hover:border-transparent hover:-translate-y-0.5 hover:shadow-gold",
-    glass: "glass text-white hover:bg-white/10 border border-white/20 hover:-translate-y-0.5",
-    accent: "bg-secondary text-white hover:bg-primary border border-primary/20 hover:-translate-y-0.5 shadow-dark",
+    primary: "bg-gold-gradient text-light shadow-gold hover:shadow-gold-lg hover:-translate-y-0.5 border border-transparent",
+    outline: "bg-transparent text-primary hover:text-light border border-primary/60 hover:bg-gold-gradient hover:border-transparent hover:-translate-y-0.5 hover:shadow-gold",
+    glass: "glass text-light hover:bg-light/10 border border-light/20 hover:-translate-y-0.5",
+    accent: "bg-secondary text-light hover:bg-primary border border-primary/20 hover:-translate-y-0.5 shadow-dark",
   };
 
   return (

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import Button from './Button';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,17 +61,9 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          {/* Logo - HB bars + stacked text */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="flex items-end gap-[3px] h-9">
-              <div className="w-3.5 h-9 bg-primary rounded-sm" />
-              <div className="w-3.5 h-6 bg-primary rounded-sm" />
-              <div className="w-3.5 h-9 bg-white/80 rounded-sm" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className="text-base md:text-lg font-extrabold tracking-widest text-white uppercase">Hindustan</span>
-              <span className="text-[11px] md:text-[13px] font-light tracking-[0.18em] text-primary uppercase">Buildwell</span>
-            </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <Logo showTagline={false} />
           </Link>
 
           {/* Desktop Navigation */}
@@ -120,20 +113,12 @@ const Navbar = () => {
           className={`fixed inset-0 w-full h-screen z-[9999] flex flex-col lg:hidden transition-transform duration-500 transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
-          style={{ backgroundColor: '#020617' }}
+          style={{ backgroundColor: '#FFFFFF' }}
         >
           {/* Drawer Header with Logo + Close */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
-            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
-              <div className="flex items-end gap-[3px] h-8">
-                <div className="w-3 h-8 bg-primary rounded-sm" />
-                <div className="w-3 h-6 bg-primary rounded-sm" />
-                <div className="w-3 h-8 bg-white/80 rounded-sm" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-base font-extrabold tracking-widest text-white uppercase">Hindustan</span>
-                <span className="text-[11px] font-light tracking-[0.18em] text-primary uppercase">Buildwell</span>
-              </div>
+            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center">
+              <Logo showTagline={false} />
             </Link>
             <button
               onClick={() => setIsOpen(false)}

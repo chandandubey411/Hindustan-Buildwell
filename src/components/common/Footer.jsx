@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import Logo from './Logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,17 +24,8 @@ const Footer = () => {
           
           {/* Logo and Intro */}
           <div className="flex flex-col gap-4">
-            <Link to="/" className="flex items-center gap-3">
-              {/* HB Logo Icon Bars Only */}
-              <div className="flex items-end gap-[3px] h-9">
-                <div className="w-3.5 h-9 bg-primary rounded-sm" />
-                <div className="w-3.5 h-6 bg-primary rounded-sm" />
-                <div className="w-3.5 h-9 bg-white/80 rounded-sm" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-base font-extrabold tracking-widest text-white uppercase">Hindustan</span>
-                <span className="text-[12px] font-light tracking-[0.18em] text-primary uppercase">Buildwell</span>
-              </div>
+            <Link to="/" className="flex items-center">
+              <Logo showTagline={true} />
             </Link>
             <p className="text-white/60 text-sm leading-relaxed mt-4 font-sans font-light">
               Building India's Future, One Landmark at a Time. Delivering high-end residential, premium commercial and investment real estate consulting across the nation.
