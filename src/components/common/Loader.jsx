@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Logo from './Logo';
 
 const Loader = ({ onFinish }) => {
   const [percent, setPercent] = useState(0);
@@ -31,18 +30,24 @@ const Loader = ({ onFinish }) => {
         className="flex flex-col items-center"
       >
         {/* Glow backdrop behind the logo */}
-        <div className="absolute w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none -z-10" />
+        <div className="absolute w-48 h-48 bg-primary/15 rounded-full blur-3xl pointer-events-none -z-10" />
 
-        <Logo vertical={true} showTagline={true} className="mb-8" />
-        
+        {/* Logo image only — no text */}
+        <img
+          src="/logo.jpeg"
+          alt="Hindustan Buildwell"
+          className="w-44 h-44 md:w-56 md:h-56 object-contain block"
+          style={{ marginBottom: '-12px' }}
+        />
+
         {/* Progress indicator */}
-        <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden mb-3 relative">
+        <div className="w-48 h-[2px] bg-white/10 rounded-full overflow-hidden relative" style={{ marginBottom: '6px' }}>
           <div
             className="h-full bg-gold-gradient transition-all duration-75"
             style={{ width: `${percent}%` }}
           />
         </div>
-        
+
         <span className="font-heading font-semibold text-[10px] text-white/50 tracking-wider">
           {percent}%
         </span>
