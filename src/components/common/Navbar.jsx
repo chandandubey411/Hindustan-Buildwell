@@ -54,16 +54,31 @@ const Navbar = () => {
       </div>
 
       <nav
-        className={`fixed top-0 lg:top-[38px] left-0 w-full z-[1000] py-4 transition-all duration-500 font-heading ${
+        className={`fixed top-0 lg:top-[38px] left-0 w-full z-[1000] transition-all duration-500 font-heading ${
           isScrolled
-            ? 'bg-dark/95 border-b border-primary/20 backdrop-blur-md shadow-glow py-3'
-            : 'bg-transparent border-b border-white/5'
+            ? 'bg-dark/95 border-b border-primary/20 backdrop-blur-md shadow-glow py-1.5'
+            : 'bg-transparent border-b border-white/5 py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo — shrinks on scroll on desktop, fixed on mobile */}
           <Link to="/" className="flex items-center">
-            <Logo showTagline={false} />
+            <img
+              src="/logo.jpeg"
+              alt="Hindustan Buildwell"
+              style={{
+                height: isScrolled ? '44px' : '84px',
+                width: 'auto',
+                transition: 'height 0.4s ease',
+              }}
+              className="object-contain shrink-0 block hidden lg:block"
+            />
+            {/* Mobile logo — fixed size */}
+            <img
+              src="/logo.jpeg"
+              alt="Hindustan Buildwell"
+              className="h-10 w-auto object-contain shrink-0 block lg:hidden"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -138,7 +153,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className="group flex items-center justify-between py-4 border-b border-white/5 text-white hover:text-primary transition-colors duration-300"
               >
-                <span className="text-xl font-bold font-heading uppercase tracking-widest">{link.name}</span>
+                <span className="text-sm font-bold font-heading uppercase tracking-widest">{link.name}</span>
                 <span className="text-xs text-white/20 group-hover:text-primary transition-colors">0{idx + 1}</span>
               </Link>
             ))}

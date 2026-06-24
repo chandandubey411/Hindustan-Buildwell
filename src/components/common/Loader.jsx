@@ -36,8 +36,8 @@ const Loader = ({ onFinish }) => {
         <img
           src="/logo.jpeg"
           alt="Hindustan Buildwell"
-          className="w-44 h-44 md:w-56 md:h-56 object-contain block"
-          style={{ marginBottom: '-12px' }}
+          className="w-[264px] h-[264px] md:w-[336px] md:h-[336px] object-contain block"
+          style={{ marginBottom: '-18px' }}
         />
 
         {/* Progress indicator */}

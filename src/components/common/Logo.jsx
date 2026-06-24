@@ -9,7 +9,7 @@ const Logo = ({ className = '', vertical = false }) => {
       src="/logo.jpeg"
       alt="Hindustan Buildwell"
       className={`object-contain shrink-0 select-none ${
-        vertical ? 'h-20 md:h-24 w-auto' : 'h-12 md:h-14 w-auto'
+        vertical ? 'h-[120px] md:h-36 w-auto' : 'h-10 md:h-[84px] w-auto'
       } ${className}`}
     />
   );
