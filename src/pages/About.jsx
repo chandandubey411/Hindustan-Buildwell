@@ -38,7 +38,7 @@ const About = () => {
     },
     {
       name: "Risheyka Muttreja",
-      role: "Sales Executive",
+      role: "Business Development Executive - Trainee",
       image: "/leadership/Risheyka Muttreja.jpeg",
       bio: "Risheyka Muttreja is pursuing B.Sc. (Hons) Business and Management from University of London at Indian School of Business and Finance. She is deeply passionate about sales and business management, understanding how organisations operate, make decisions, and create long-term value. Her strengths lie in Digital Marketing, Advertising, Research, Consumer Trend Recognition, strategic thinking, and problem-solving — approaching every challenge with both structure and creativity.",
     },
