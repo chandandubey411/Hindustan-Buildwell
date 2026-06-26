@@ -26,19 +26,19 @@ const About = () => {
   const boardMembers = [
     {
       name: "Shekhar Muttreja",
-      role: "Managing Director",
+      role: "CEO",
       image: "/leadership/Shekhar Muttreja.jpeg",
       bio: "Shekhar Muttreja holds a Post Graduate Diploma in Management from IIPM. His career graph was assertively honed by his never-stopping urge to achieve excellence. His journey of 25+ years comprises brand promotion, marketing, export and retail distribution. Project planning and execution shine with his vivid range of work exposure. His task achievement always gelled with his never-ending desire to encompass the spirit of team performance and motivation. His past experience brings immense value to various Real Estate Projects — organising multi-faceted mixed units of real estate, commercial, 7-star hospitality, IT & ITES with a touch of residential properties. This unified touch of markets and experience brings a valued unique blend to every project.",
     },
     {
       name: "Ravneet Muttreja",
-      role: "Director",
+      role: "Head Operations",
       image: "/leadership/Ravneet professional.jpeg",
       bio: "Ravneet Muttreja holds a B.E. in Computer Technology and an MBA in International Trade from IMT. She is a seasoned professional with 24 years of rich, cross-industry experience spanning Software Development, Marketing, Brand Promotion, Export–Import, Retail Distribution, and Legal Affairs. Known for her strategic foresight and ability to connect the dots between diverse business functions, she excels at driving multidimensional growth and delivering sustainable, long-term results. Her approach combines innovation, operational excellence, and market insight — helping organisations unlock new opportunities and thrive in competitive environments.",
     },
     {
       name: "Risheyka Muttreja",
-      role: "Executive Director",
+      role: "Sales Executive",
       image: "/leadership/Risheyka Muttreja.jpeg",
       bio: "Risheyka Muttreja is pursuing B.Sc. (Hons) Business and Management from University of London at Indian School of Business and Finance. She is deeply passionate about sales and business management, understanding how organisations operate, make decisions, and create long-term value. Her strengths lie in Digital Marketing, Advertising, Research, Consumer Trend Recognition, strategic thinking, and problem-solving — approaching every challenge with both structure and creativity.",
     },
