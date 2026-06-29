@@ -1,29 +1,9 @@
-import React, { useState } from 'react';
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock, FaCheckCircle, FaPaperPlane } from 'react-icons/fa';
-import Button from '../components/common/Button';
+import React from 'react';
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock, FaWhatsapp } from 'react-icons/fa';
 import SlideUp from '../components/animations/SlideUp';
 import PageHero from '../components/common/PageHero';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setName('');
-    setEmail('');
-    setPhone('');
-    setSubject('');
-    setMessage('');
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
-  };
 
   const offices = [
     {
@@ -110,103 +90,69 @@ const Contact = () => {
 
             </div>
 
-            {/* Right Column: Dynamic Form Submission Panel */}
-            <SlideUp className="glass-dark border border-primary/20 p-8 rounded-2xl shadow-glow text-left">
-              <span className="text-[10px] font-bold text-accent uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-1 rounded-full mb-4 inline-block">
-                Secure advisory channel
-              </span>
-              <h3 className="text-white font-bold text-xl uppercase tracking-wider mb-2">
-                Advisory Inquiry Sheet
-              </h3>
-              <p className="text-white/50 text-xs font-sans leading-relaxed mb-8">
-                Submit your investment details below. All submitted coordinates are processed through private encrypted servers.
-              </p>
-
-              {submitted ? (
-                <div className="flex flex-col items-center gap-4 text-center p-8 bg-primary/10 border border-primary/20 rounded-xl">
-                  <FaCheckCircle className="text-primary text-5xl animate-bounce-slow" />
-                  <h4 className="text-white font-semibold text-lg">Inquiry Sheet Submitted!</h4>
-                  <p className="text-xs text-white/50 font-sans leading-relaxed">
-                    Thank you. A corporate hospitality coordinator has been assigned. You will receive an initial email confirmation within 15 minutes.
-                  </p>
+            {/* Right Column: Direct WhatsApp Connection Panel */}
+            <SlideUp className="glass-dark border border-primary/20 p-8 rounded-2xl shadow-glow text-left flex flex-col justify-between h-full min-h-[480px]">
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-[10px] font-bold text-accent uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
+                    Instant Advisory Channel
+                  </span>
+                  <span className="flex items-center gap-1.5 text-[10px] font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Online
+                  </span>
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-bold text-accent uppercase tracking-wider">Full Name</label>
-                      <input
-                        type="text"
-                        required
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Enter full name"
-                        className="w-full px-4 py-3.5 rounded-lg bg-dark/60 text-white placeholder-white/35 border border-white/10 text-xs focus:border-primary font-sans transition-all duration-300"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-bold text-accent uppercase tracking-wider">Corporate Email</label>
-                      <input
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="e.g. name@corporate.com"
-                        className="w-full px-4 py-3.5 rounded-lg bg-dark/60 text-white placeholder-white/35 border border-white/10 text-xs focus:border-primary font-sans transition-all duration-300"
-                      />
-                    </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-bold text-accent uppercase tracking-wider">Mobile Number</label>
-                      <input
-                        type="tel"
-                        required
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="e.g. +91 XXXXX XXXXX"
-                        className="w-full px-4 py-3.5 rounded-lg bg-dark/60 text-white placeholder-white/35 border border-white/10 text-xs focus:border-primary font-sans transition-all duration-300"
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1.5">
-                      <label className="text-[10px] font-bold text-accent uppercase tracking-wider">Inquiry Subject</label>
-                      <select
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
-                        required
-                        className="w-full px-4 py-3.5 rounded-lg bg-dark/60 text-white border border-white/10 text-xs focus:border-primary font-sans transition-all duration-300"
+                <h3 className="text-white font-bold text-2xl uppercase tracking-wider mb-3">
+                  Connect via WhatsApp
+                </h3>
+                <p className="text-white/65 text-xs md:text-sm font-sans leading-relaxed mb-8">
+                  Skip the paperwork. Chat directly with our executive investment board and senior coordinators. Get instant project brochures, pricing details, and schedule private site walkthroughs.
+                </p>
+
+                {/* Interactive Quick Templates */}
+                <div className="flex flex-col gap-3 mb-8">
+                  <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Select an inquiry template:</span>
+                  <div className="flex flex-col gap-2">
+                    {[
+                      { label: "Request Brochure", text: "Hello, I would like to request the latest project brochure and portfolio details." },
+                      { label: "Schedule Site Visit", text: "Hello, I am interested in scheduling a private site visit and walkthrough." },
+                      { label: "Investment Consultation", text: "Hello, I would like to schedule an investment consultation with the advisory board." },
+                      { label: "General Inquiry", text: "Hello, I have a general inquiry regarding your current residential and commercial projects." }
+                    ].map((template, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => {
+                          const encodedText = encodeURIComponent(template.text);
+                          window.open(`https://wa.me/919810070711?text=${encodedText}`, '_blank');
+                        }}
+                        className="text-[11px] font-sans font-medium text-white/80 bg-white/5 border border-white/10 hover:border-primary/50 hover:bg-primary/10 hover:text-primary rounded-lg px-3 py-2 text-left transition-all duration-300 cursor-pointer animate-fade-in"
                       >
-                        <option value="">Select Reason</option>
-                        <option value="Residential Acquisition">Residential Acquisition</option>
-                        <option value="Commercial Lease/Purchase">Commercial Lease/Purchase</option>
-                        <option value="Smart Township Collaboration">Smart Township Collaboration</option>
-                        <option value="Career & Leadership Careers">Career & Leadership Careers</option>
-                        <option value="Other general inquiry">Other general inquiry</option>
-                      </select>
-                    </div>
+                        {template.label}
+                      </button>
+                    ))}
                   </div>
+                </div>
+              </div>
 
-                  <div className="flex flex-col gap-1.5">
-                    <label className="text-[10px] font-bold text-accent uppercase tracking-wider">Brief Message Context</label>
-                    <textarea
-                      rows="4"
-                      required
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      placeholder="Outline details or list property IDs you are interested in..."
-                      className="w-full px-4 py-3.5 rounded-lg bg-dark/60 text-white placeholder-white/35 border border-white/10 text-xs focus:border-primary font-sans transition-all duration-300 resize-none"
-                    />
-                  </div>
-
-                  <Button type="submit" variant="primary" className="w-full py-4 text-xs font-heading mt-2">
-                    Submit Private Inquiry Sheet <FaPaperPlane className="text-[10px]" />
-                  </Button>
-
-                </form>
-              )}
-
+              <div>
+                <a
+                  href="https://wa.me/919810070711"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-heading font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:from-emerald-400 hover:to-teal-500 transition-all duration-300 transform hover:-translate-y-0.5 text-center cursor-pointer"
+                >
+                  <FaWhatsapp className="text-xl group-hover:scale-110 transition-transform duration-300" />
+                  Start Direct Chat
+                </a>
+                
+                <p className="text-[10px] text-white/30 font-sans text-center mt-3">
+                  Typically responds in under 5 minutes • Available 24/7
+                </p>
+              </div>
             </SlideUp>
 
           </div>
