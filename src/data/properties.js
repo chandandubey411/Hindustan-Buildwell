@@ -185,6 +185,7 @@ export const properties = [
       "Indoor Games",
     ],
     images: [
+      "/skytech.png",
       "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80",
       "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=800&q=80",
       "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80",
@@ -233,6 +234,7 @@ export const properties = [
       "Multipurpose Hall",
     ],
     images: [
+      "/tower-j.png",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80",
       "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
