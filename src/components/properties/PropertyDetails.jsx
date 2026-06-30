@@ -4,7 +4,6 @@ import Button from '../common/Button';
 import SlideUp from '../animations/SlideUp';
 
 const PropertyDetails = ({ property }) => {
-  const [activeImage, setActiveImage] = useState(property.images[0]);
   const [inquiryName, setInquiryName] = useState('');
   const [inquiryEmail, setInquiryEmail] = useState('');
   const [inquiryPhone, setInquiryPhone] = useState('');
@@ -25,47 +24,6 @@ const PropertyDetails = ({ property }) => {
   return (
     <div className="font-heading">
       
-      {/* Upper Area: Dynamic Interactive Image Gallery */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-        
-        {/* Main large active view */}
-        <div className="lg:col-span-2 relative aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden border border-white/5 shadow-glow">
-          <img
-            src={activeImage}
-            alt={property.title}
-            className="w-full h-full object-cover transition-all duration-500"
-          />
-          <div className="absolute top-4 left-4 flex gap-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider bg-gold-gradient text-white px-3 py-1 rounded">
-              {property.badge || 'Premium'}
-            </span>
-            <span className="text-[10px] font-semibold uppercase tracking-wider bg-dark/80 backdrop-blur-sm border border-white/10 text-white px-3 py-1 rounded">
-              {property.type}
-            </span>
-          </div>
-        </div>
-
-        {/* Vertical/Horizontal grid of other thumbnails */}
-        <div className="flex flex-row lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible shrink-0 lg:max-h-[480px]">
-          {property.images.map((img, idx) => (
-            <button
-              key={idx}
-              onClick={() => setActiveImage(img)}
-              className={`relative aspect-[3/2] w-24 md:w-32 lg:w-full rounded-xl overflow-hidden border-2 shrink-0 transition-all duration-300 ${
-                activeImage === img ? 'border-primary shadow-gold' : 'border-white/10 opacity-60 hover:opacity-100'
-              }`}
-            >
-              <img
-                src={img}
-                alt={`${property.title} gallery thumbnail ${idx + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
-        </div>
-
-      </div>
-
       {/* Main split details area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
         
