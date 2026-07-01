@@ -1,5 +1,10 @@
 import React from 'react';
-import { FaBuilding, FaHome, FaCity, FaDraftingCompass, FaPaintRoller, FaCheckCircle, FaShieldAlt, FaClock, FaHandshake, FaMedal, FaChartLine, FaUserTie } from 'react-icons/fa';
+import {
+  FaBuilding, FaHome, FaCity, FaDraftingCompass, FaPaintRoller, FaCheckCircle,
+  FaShieldAlt, FaClock, FaHandshake, FaMedal, FaChartLine, FaUserTie,
+  FaHotel, FaHospital, FaSchool, FaGraduationCap, FaNetworkWired, FaTree,
+  FaGlobe, FaMapMarkedAlt, FaShoppingBag, FaStore, FaBriefcase
+} from 'react-icons/fa';
 import { services } from '../data/services';
 import SectionTitle from '../components/common/SectionTitle';
 import SlideUp from '../components/animations/SlideUp';
@@ -8,6 +13,21 @@ import { Link } from 'react-router-dom';
 import PageHero from '../components/common/PageHero';
 
 const Services = () => {
+  const dealCategories = [
+    { icon: <FaHotel className="text-2xl" />, title: "Star Hotels", desc: "Bespoke hospitality acquisitions, premium resorts, and five-star luxury hotel spaces." },
+    { icon: <FaHospital className="text-2xl" />, title: "Hospital", desc: "Advanced healthcare infrastructure, medical campus centers, and multi-specialty clinical buildings." },
+    { icon: <FaSchool className="text-2xl" />, title: "School", desc: "Smart school campuses, primary educational facilities, and kids' academies." },
+    { icon: <FaGraduationCap className="text-2xl" />, title: "Educational Institutions", desc: "Colleges, research centers, and training institutes with modern classrooms." },
+    { icon: <FaBuilding className="text-2xl" />, title: "Large Office Floors", desc: "Grade-A corporate floors, co-working zones, and executive commercial floors." },
+    { icon: <FaNetworkWired className="text-2xl" />, title: "IT / ITES plots and Building", desc: "Tech parks, cyber centers, and IT-approved plots/buildings with high bandwidth." },
+    { icon: <FaTree className="text-2xl" />, title: "Farm Lands", desc: "Fertile agricultural lands, premium farmhouse plots, and organic retreat fields." },
+    { icon: <FaGlobe className="text-2xl" />, title: "All Lands", desc: "Commercial, residential, industrial, and mixed-use land parcels across India." },
+    { icon: <FaMapMarkedAlt className="text-2xl" />, title: "Plots", desc: "Gated community plots, residential layout plots, and industrial land subdivisions." },
+    { icon: <FaShoppingBag className="text-2xl" />, title: "Mall", desc: "High-footfall shopping malls, multiplex commercial centers, and retail galleries." },
+    { icon: <FaStore className="text-2xl" />, title: "Commercial spaces shops", desc: "Premium high-street retail shops, double-height showrooms, and boutiques." },
+    { icon: <FaBriefcase className="text-2xl" />, title: "Companies", desc: "Standalone corporate headquarters, SME company zones, and business houses." }
+  ];
+
   const iconMap = {
     FaBuilding: <FaBuilding className="text-3xl" />,
     FaHome: <FaHome className="text-3xl" />,
@@ -101,6 +121,27 @@ const Services = () => {
                 </SlideUp>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* 2.5 Asset Portfolios We Deal In */}
+      <section className="relative py-24 bg-dark border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <SectionTitle subtitle="Asset Classes & Sectors" title="Properties We Deal In" align="center" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-14">
+            {dealCategories.map((deal, idx) => (
+              <SlideUp key={idx} delay={idx * 0.05} className="glass-dark border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-primary/25 transition-all duration-400 group relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-gold-gradient group-hover:text-white group-hover:border-transparent transition-all duration-300 mb-4">
+                  {deal.icon}
+                </div>
+                <h3 className="text-white font-bold text-base tracking-tight uppercase mb-2 group-hover:text-primary transition-colors duration-300">{deal.title}</h3>
+                <p className="text-white/60 text-xs font-sans font-light leading-relaxed mb-4">{deal.desc}</p>
+                <Link to="/contact" className="text-primary text-[10px] uppercase font-bold tracking-wider group-hover:text-white transition-colors flex items-center gap-1.5 mt-auto">
+                  Inquire Now <span>&rarr;</span>
+                </Link>
+              </SlideUp>
+            ))}
           </div>
         </div>
       </section>
