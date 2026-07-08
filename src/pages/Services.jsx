@@ -3,7 +3,8 @@ import {
   FaBuilding, FaHome, FaCity, FaDraftingCompass, FaPaintRoller, FaCheckCircle,
   FaShieldAlt, FaClock, FaHandshake, FaMedal, FaChartLine, FaUserTie,
   FaHotel, FaHospital, FaSchool, FaGraduationCap, FaNetworkWired, FaTree,
-  FaGlobe, FaMapMarkedAlt, FaShoppingBag, FaStore, FaBriefcase
+  FaGlobe, FaMapMarkedAlt, FaShoppingBag, FaStore, FaBriefcase,
+  FaUsers, FaGasPump, FaExclamationTriangle, FaTags, FaCouch
 } from 'react-icons/fa';
 import { services } from '../data/services';
 import SectionTitle from '../components/common/SectionTitle';
@@ -25,7 +26,12 @@ const Services = () => {
     { icon: <FaMapMarkedAlt className="text-2xl" />, title: "Plots", desc: "Gated community plots, residential layout plots, and industrial land subdivisions." },
     { icon: <FaShoppingBag className="text-2xl" />, title: "Mall", desc: "High-footfall shopping malls, multiplex commercial centers, and retail galleries." },
     { icon: <FaStore className="text-2xl" />, title: "Commercial spaces shops", desc: "Premium high-street retail shops, double-height showrooms, and boutiques." },
-    { icon: <FaBriefcase className="text-2xl" />, title: "Companies", desc: "Standalone corporate headquarters, SME company zones, and business houses." }
+    { icon: <FaBriefcase className="text-2xl" />, title: "Companies", desc: "Standalone corporate headquarters, SME company zones, and business houses." },
+    { icon: <FaUsers className="text-2xl" />, title: "Corporate Bulk Deals / Requirements & Bookings", desc: "End-to-end facilitation of bulk corporate acquisitions, large-scale bookings, and multi-unit requirements for enterprises and institutions across India." },
+    { icon: <FaGasPump className="text-2xl" />, title: "Petrol Pumps", desc: "Strategically located petrol pump sites, fuel station land parcels, and established pump dealerships for acquisition or leasing pan-India." },
+    { icon: <FaExclamationTriangle className="text-2xl" />, title: "Stressed Assets / Projects Resolution", desc: "Expert resolution of distressed real estate assets, NPA properties, stalled projects, and stressed developer portfolios through structured advisory." },
+    { icon: <FaTags className="text-2xl" />, title: "Corporate / Commercial Leasing for Brands", desc: "Premium commercial leasing solutions for national and international brands — showrooms, flagship stores, and office spaces across all major cities in India." },
+    { icon: <FaCouch className="text-2xl" />, title: "Serviced Apartment", desc: "Fully furnished, managed serviced apartments for corporate stays, NRIs, and long-term rentals — available across premium locations pan-India." }
   ];
 
   const iconMap = {
