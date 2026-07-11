@@ -9,14 +9,14 @@ const Contact = () => {
     {
       city: "Registered Office — Noida",
       address: "45, The Courtyard, Maharishi Ashram Marg, Sector 107, Noida, U.P. - 201304, INDIA",
-      phone: "+91 98100 70711",
+      phones: ["+91 98100 70711", "+91 95606 47158"],
       email: "info@hindustanbuildwell.com",
       hours: "Mon - Sat: 9:30 AM - 6:30 PM"
     },
     {
       city: "Advisory Contact — Shekar Muttreja",
       address: "45, The Courtyard, Maharishi Ashram Marg, Sector 107, Noida, U.P. - 201304, INDIA",
-      phone: "+91 98100 70711",
+      phones: ["+91 98100 70711", "+91 95606 47158"],
       email: "info@hindustanbuildwell.com",
       hours: "Mon - Sat: 10:00 AM - 7:00 PM"
     }
@@ -71,9 +71,13 @@ const Contact = () => {
                         <FaMapMarkerAlt className="text-primary mt-1 shrink-0" />
                         <span>{office.address}</span>
                       </li>
-                      <li className="flex gap-3 items-center">
-                        <FaPhoneAlt className="text-primary shrink-0" />
-                        <a href={`tel:${office.phone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{office.phone}</a>
+                      <li className="flex gap-3 items-start">
+                        <FaPhoneAlt className="text-primary shrink-0 mt-0.5" />
+                        <div className="flex flex-col gap-1">
+                          {office.phones.map((phone, pIdx) => (
+                            <a key={pIdx} href={`tel:${phone.replace(/\s+/g, '')}`} className="hover:text-primary transition-colors">{phone}</a>
+                          ))}
+                        </div>
                       </li>
                       <li className="flex gap-3 items-center">
                         <FaEnvelope className="text-primary shrink-0" />
@@ -138,7 +142,17 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="flex flex-col gap-3">
+                {/* Call Button */}
+                <a
+                  href="tel:+919560647158"
+                  className="group relative flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-heading font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-0.5 text-center cursor-pointer"
+                >
+                  <FaPhoneAlt className="text-lg group-hover:scale-110 transition-transform duration-300" />
+                  Call Now — +91 95606 47158
+                </a>
+
+                {/* WhatsApp Button */}
                 <a
                   href="https://wa.me/919810070711"
                   target="_blank"
@@ -146,10 +160,10 @@ const Contact = () => {
                   className="group relative flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-heading font-bold text-sm uppercase tracking-wider shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:from-emerald-400 hover:to-teal-500 transition-all duration-300 transform hover:-translate-y-0.5 text-center cursor-pointer"
                 >
                   <FaWhatsapp className="text-xl group-hover:scale-110 transition-transform duration-300" />
-                  Start Direct Chat
+                  WhatsApp — +91 98100 70711
                 </a>
                 
-                <p className="text-[10px] text-white/30 font-sans text-center mt-3">
+                <p className="text-[10px] text-white/30 font-sans text-center mt-1">
                   Typically responds in under 5 minutes • Available 24/7
                 </p>
               </div>

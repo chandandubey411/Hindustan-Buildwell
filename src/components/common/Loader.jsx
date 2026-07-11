@@ -37,7 +37,7 @@ const Loader = ({ onFinish }) => {
           src="/logo.jpeg"
           alt="Hindustan Buildwell"
           className="w-[264px] h-[264px] md:w-[336px] md:h-[336px] object-contain block"
-          style={{ marginBottom: '-18px' }}
+          style={{ marginBottom: '-60px' }}
         />
 
         {/* Progress indicator */}

@@ -112,7 +112,10 @@ const Footer = () => {
               </li>
               <li className="flex gap-3 items-center">
                 <FaPhoneAlt className="text-primary shrink-0" />
-                <a href="tel:+919810070711" className="hover:text-primary transition-colors">+91 98100 70711</a>
+                <div className="flex flex-col gap-1">
+                  <a href="tel:+919810070711" className="hover:text-primary transition-colors">+91 98100 70711</a>
+                  <a href="tel:+919560647158" className="hover:text-primary transition-colors">+91 95606 47158</a>
+                </div>
               </li>
               <li className="flex gap-3 items-center">
                 <FaEnvelope className="text-primary shrink-0" />
