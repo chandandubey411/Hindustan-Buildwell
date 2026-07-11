@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import ScrollToTop from '../components/common/ScrollToTop';
+import WhatsAppButton from '../components/common/WhatsAppButton';
 
 const MainLayout = ({ children }) => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -39,6 +40,9 @@ const MainLayout = ({ children }) => {
 
       {/* Corporate footer */}
       <Footer />
+
+      {/* WhatsApp floating button */}
+      <WhatsAppButton />
 
       {/* Page scroll support */}
       <ScrollToTop />

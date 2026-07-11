@@ -10,14 +10,14 @@ const Contact = () => {
       city: "Registered Office — Noida",
       address: "45, The Courtyard, Maharishi Ashram Marg, Sector 107, Noida, U.P. - 201304, INDIA",
       phone: "+91 98100 70711",
-      email: "hindustaninvestments@gmail.com",
+      email: "info@hindustanbuildwell.com",
       hours: "Mon - Sat: 9:30 AM - 6:30 PM"
     },
     {
       city: "Advisory Contact — Shekar Muttreja",
       address: "45, The Courtyard, Maharishi Ashram Marg, Sector 107, Noida, U.P. - 201304, INDIA",
       phone: "+91 98100 70711",
-      email: "hindustaninvestments@gmail.com",
+      email: "info@hindustanbuildwell.com",
       hours: "Mon - Sat: 10:00 AM - 7:00 PM"
     }
   ];

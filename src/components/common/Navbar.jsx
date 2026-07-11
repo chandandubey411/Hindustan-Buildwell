@@ -40,8 +40,8 @@ const Navbar = () => {
       {/* Top Bar for sleek Corporate appearance */}
       <div className="hidden lg:flex w-full bg-dark border-b border-white/5 py-2.5 px-8 justify-between text-xs text-white/60 z-[1001] relative font-heading">
         <div className="flex items-center gap-6">
-          <a href="mailto:hindustaninvestments@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-            <FaEnvelope className="text-primary text-[11px]" /> hindustaninvestments@gmail.com
+          <a href="mailto:info@hindustanbuildwell.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <FaEnvelope className="text-primary text-[11px]" /> info@hindustanbuildwell.com
           </a>
           <span className="w-[1px] h-3 bg-white/10" />
           <a href="tel:+919810070711" className="flex items-center gap-2 hover:text-primary transition-colors">
@@ -170,8 +170,8 @@ const Navbar = () => {
               <a href="tel:+919810070711" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <FaPhoneAlt className="text-primary text-[10px]" /> +91 98100 70711
               </a>
-              <a href="mailto:hindustaninvestments@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <FaEnvelope className="text-primary text-[10px]" /> hindustaninvestments@gmail.com
+              <a href="mailto:info@hindustanbuildwell.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <FaEnvelope className="text-primary text-[10px]" /> info@hindustanbuildwell.com
               </a>
             </div>
           </div>
